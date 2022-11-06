@@ -1,0 +1,25 @@
+{
+  "name": "vrbt-lib",
+  "private": false,
+  "version": "0.0.2",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
+  },
+  "license": "UNLICENSED",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vrbt-lib.umd.js",
+  "module": "./dist/vrbt-lib.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vrbt-lib.es.js",
+      "require": "./dist/vrbt-lib.umd.js"
+    }
+  }
+}
